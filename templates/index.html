@@ -6,6 +6,13 @@
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link rel="stylesheet" href="index.css">
     <style>
+
+        .body {
+        background: url("cubes.jpg");
+        background-color: white;
+        margin: 0px !important;
+
+        }
         .heading {
             text-align: center;
             margin: 18px 0 30px 0;
@@ -157,10 +164,19 @@
             text-decoration: none;
         }
 
+        .footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            top: 1rem;
+        }
+
     </style>
 </head>
 
-<body>
+<body class="body">
 <div class="heading">
     <h1 style="color: #0059ff">House Price Prediction System</h1>
     <h2>Enter the values for <!--<span><img src="home.jpg" width="30" height="30" alt=""></span><span
@@ -286,6 +302,9 @@
     <a href="../static/HousePriceData.csv" download>Downlaod Dataset</a>
     <a href="../static/Model_Training.ipynb" download>Downlaod Source Code</a>
 </div> -->
-
+<footer class="footer">
+    <p>&copy; 2023 House Price Predictor. All rights reserved.</p>
+    <p>Created by Thushan</p>
+</footer>
 </body>
 </html>
