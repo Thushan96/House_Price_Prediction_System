@@ -122,11 +122,18 @@ label:after {
   content: ": ";
 }
 .csv {
-  background-color: red;
+  background-color: #2596be;
+  color: #ffffff;
   text-align: center;
-  padding: 8px 0;
-  width: 160px;
-  margin: auto;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.csv:hover {
+  background-color: #2596be;
 }
 
 .csv a {
