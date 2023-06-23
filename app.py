@@ -5,9 +5,9 @@ import pickle
 
 model = pickle.load(open('model.pkl', 'rb'))
 
-features_name = ['YearBuilt', 'Area', 'NumBedRooms', 'AreaBedroom', 'BedroomCond', 'NumKitch', 'AreaKitch',
-                 'KitchCond', 'Garage', 'GarageArea', 'Electricity', 'AirConditioning', 'NumHearth',
-                 'HouseCondition', 'Pool', 'Garden']
+features_name = ['Year Built', 'Area', 'Number Of BedRooms', 'Area Of Bedroom', 'Bed room Condition', 'Number of Kitchens', 'Area Kitchens',
+                 'Kitchen Condition', 'Garage', 'GarageArea', 'Electricity', 'Air Conditioning', 'Number of Hearths',
+                 'House Condition', 'Pool', 'Garden']
 
 # Map categorical values to numerical values
 categorical_mapping = {
@@ -42,15 +42,15 @@ def main():
 
     input_data = []
     for feature in features_name:
-        if feature.endswith('Cond'):
+        if feature.endswith('Condition'):
             options = ['Excellent', 'Very Good', 'Good', 'Average', 'Typical', 'Bad', 'Very Bad']
             input_val = st.selectbox(f'{feature}:', options, index=categorical_mapping['Average'])
         elif feature in ['Garage', 'Electricity', 'Pool', 'Garden']:
             input_val = st.selectbox(f'{feature}:', ['Yes', 'No'])
-        elif feature == 'AirConditioning':
+        elif feature == 'Air Conditioning':
             options = ['Excellent', 'Very Good', 'Good', 'Average', 'Typical', 'Bad', 'Very Bad']
             input_val = st.selectbox(f'{feature}:', options, index=categorical_mapping['Excellent'])
-        elif feature == 'HouseCondition':
+        elif feature == 'House Condition':
             options = ['Excellent', 'Very Good', 'Good', 'Average', 'Typical', 'Bad', 'Very Bad']
             input_val = st.selectbox(f'{feature}:', options, index=categorical_mapping['Normal'])
         else:
